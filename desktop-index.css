@@ -228,20 +228,20 @@ body, #wallpaper {
 
 
 #menuContainer li:active:first-child {
-
     margin-top: 9px;
-
 }
 
 
 #menuContainer li:active:last-child {
-
     margin-bottom: 9px;
-
 }
 
 
-svg {
+#wrapper img {
+    filter:invert(1);
+}
+
+img{
     width: 70%;
     height: auto;
     transform: translateY(20%);

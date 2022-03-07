@@ -58,7 +58,7 @@
     margin-bottom: 2.2em;
 }
 
-#mobile-menuContainer li svg {
+#mobile-menuContainer li img {
     height: 1.6em;
     width: 1.6em;
     position: absolute;
@@ -67,7 +67,7 @@
     transform: translateY(-0.1em);
 }
 
-#mobile-menuContainer li:last-child svg{
+#mobile-menuContainer li:last-child img{
     /* change wallpaper */
     height: 1.4em;
 }
@@ -123,8 +123,8 @@
 }
 
 @media (prefers-color-scheme:dark){
-    #mobile-menuContainer li svg g g{
-        fill: white;
+    #mobile-menuContainer li img{
+        filter: invert(1);
     }
     #mobile-layoutContainer{
         background:rgba(0,0,0,0.65);
