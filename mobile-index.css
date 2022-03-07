@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+#mobile-wrapper {
+    display: none;
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    overflow:hidden;
+
+    opacity: 0;
+}
+
+#mobile-layoutContainer{
+    position: absolute;
+    border-radius: 2.06em;
+    /*2.38em when no margin*/
+    width: calc(100% - 12px);
+    height: auto;
+    bottom:22px;   
+    left:6px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+#mobile-menuContainer {
+    /* position: absolute; */
+    bottom:0;
+    left:0;
+    width: calc(100% - 0em);
+    /* background: white; */
+
+    vertical-align: center;
+    /* text-align: center; */
+    /* flex-wrap: wrap; */
+}
+
+#mobile-menuContainer li{
+    vertical-align: middle;
+    font-family: 'Nunito', sans-serif;
+    height: 1.6em;
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 1.8em;
+    margin-right: 2em;
+    width: calc(100% - 4em);
+    user-select: none;
+}
+
+#mobile-menuContainer li:first-child{
+    margin-top: 1.8em;
+}
+#mobile-menuContainer li:last-child{
+    margin-bottom: 2.2em;
+}
+
+#mobile-menuContainer li svg {
+    height: 1.6em;
+    width: 1.6em;
+    position: absolute;
+    right: 1.8em;
+    color: black;
+    transform: translateY(-0.1em);
+}
+
+#mobile-menuContainer li:last-child svg{
+    /* change wallpaper */
+    height: 1.4em;
+}
+
+#mobile-new-wall{
+    z-index: 60;
+    position: absolute;
+    top: 0;
+    left: calc(50%);
+    width: 20px;
+    height: 20px;
+    padding:40px;
+    transform: translateX(-50%);
+}
+
+#mobile-iframe{
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    height:calc(100% - 4.5em);
+    width:100%;
+    display: none;
+}
+
+#mobile-iframe-wrap{
+    overflow: hidden;
+    border-radius: 1em;
+    height: 100%;
+    width:100%;
+    display: none;
+    opacity: 0;
+    top:0;
+    left:0;
+}
+
+#mobile-close-button{
+    background-color: #E32636;
+    width: 100%;
+    height:0;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-radius: 0 0 1em 1em;
+}
+
+#mobile-close-button svg{
+    position: absolute;
+    left:50%;
+    top:50%;
+    height: 2em;
+    transform: translate(-50%, -90%);
+}
+
+@media (prefers-color-scheme:dark){
+    #mobile-menuContainer li svg g g{
+        fill: white;
+    }
+    #mobile-layoutContainer{
+        background:rgba(0,0,0,0.65);
+    }
+    #mobile-menuContainer li {
+        color: white;
+    }
+    #mobile-close-button{
+        background-color: #A31321;
+    }
+}

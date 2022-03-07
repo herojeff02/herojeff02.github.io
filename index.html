@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+
+    <title>PiOS</title>
+    <meta charset="utf-8">
+    <script src="./scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="./scripts/golden-layout.js" type="text/javascript"></script>
+    <link href="golden.css" rel="stylesheet" type="text/css">
+    <link href="mobile-index.css" rel="stylesheet" type="text/css">
+    <link href="desktop-index.css" rel="stylesheet" type="text/css">
+    <link href="golden.css" rel="stylesheet" type="text/css">
+    <link href="favicon.ico" rel="apple-touch-icon">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+
+    <!-- no-cache -->
+    <!-- <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> -->
+
+    <link rel="apple-touch-startup-image" href="images/launch.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <!-- viewport-fit=cover,  -->
+</head>
+
+<body>
+    <div id="wallpaper"></div>
+    <div id="wrapper">
+        <ul id="menuContainer"></ul>
+        <div id="layoutContainer"></div>
+        <svg id="new-wall" onclick="new_wallpaper();"
+        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="24" height="24"
+        viewBox="0 0 172 172"
+        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M64.5,21.5c-3.956,0 -7.16667,3.21067 -7.16667,7.16667c0,3.956 3.21067,7.16667 7.16667,7.16667h64.5c3.956,0 7.16667,3.21067 7.16667,7.16667v64.5h-14.33333c-2.89533,0 -5.50993,1.74285 -6.62077,4.42318c-0.3655,0.88866 -0.5459,1.81899 -0.5459,2.74349c0,1.86333 0.73078,3.69822 2.09961,5.06706l21.5,21.5c2.80217,2.80217 7.33911,2.80217 10.13411,0l21.5,-21.5c2.04967,-2.04967 2.65738,-5.12304 1.55371,-7.81054c-1.11083,-2.68034 -3.72543,-4.42318 -6.62077,-4.42318h-14.33333v-64.5c0,-11.87517 -9.62483,-21.5 -21.5,-21.5zM28.66667,28.66667c-1.83377,0 -3.66956,0.69853 -5.06706,2.09961l-21.5,21.5c-2.04967,2.04967 -2.65738,5.12305 -1.55371,7.81055c1.11083,2.68033 3.72543,4.42318 6.62077,4.42318h14.33333v64.5c0,11.87517 9.62483,21.5 21.5,21.5h64.5c3.956,0 7.16667,-3.21067 7.16667,-7.16667c0,-3.956 -3.21067,-7.16667 -7.16667,-7.16667h-64.5c-3.956,0 -7.16667,-3.21067 -7.16667,-7.16667v-64.5h14.33333c2.89533,0 5.50993,-1.74284 6.62077,-4.42318c0.3655,-0.88867 0.5459,-1.81899 0.5459,-2.74349c0,-1.86333 -0.73078,-3.69822 -2.09961,-5.06706l-21.5,-21.5c-1.40108,-1.40108 -3.23329,-2.09961 -5.06706,-2.09961z"></path></g></g></svg>
+    </div>
+
+    <div id="mobile-wrapper">
+        <svg id="mobile-new-wall" onclick="new_wallpaper();"
+             xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+             width="24" height="24"
+             viewBox="0 0 172 172"
+             style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M64.5,21.5c-3.956,0 -7.16667,3.21067 -7.16667,7.16667c0,3.956 3.21067,7.16667 7.16667,7.16667h64.5c3.956,0 7.16667,3.21067 7.16667,7.16667v64.5h-14.33333c-2.89533,0 -5.50993,1.74285 -6.62077,4.42318c-0.3655,0.88866 -0.5459,1.81899 -0.5459,2.74349c0,1.86333 0.73078,3.69822 2.09961,5.06706l21.5,21.5c2.80217,2.80217 7.33911,2.80217 10.13411,0l21.5,-21.5c2.04967,-2.04967 2.65738,-5.12304 1.55371,-7.81054c-1.11083,-2.68034 -3.72543,-4.42318 -6.62077,-4.42318h-14.33333v-64.5c0,-11.87517 -9.62483,-21.5 -21.5,-21.5zM28.66667,28.66667c-1.83377,0 -3.66956,0.69853 -5.06706,2.09961l-21.5,21.5c-2.04967,2.04967 -2.65738,5.12305 -1.55371,7.81055c1.11083,2.68033 3.72543,4.42318 6.62077,4.42318h14.33333v64.5c0,11.87517 9.62483,21.5 21.5,21.5h64.5c3.956,0 7.16667,-3.21067 7.16667,-7.16667c0,-3.956 -3.21067,-7.16667 -7.16667,-7.16667h-64.5c-3.956,0 -7.16667,-3.21067 -7.16667,-7.16667v-64.5h14.33333c2.89533,0 5.50993,-1.74284 6.62077,-4.42318c0.3655,-0.88867 0.5459,-1.81899 0.5459,-2.74349c0,-1.86333 -0.73078,-3.69822 -2.09961,-5.06706l-21.5,-21.5c-1.40108,-1.40108 -3.23329,-2.09961 -5.06706,-2.09961z"></path></g></g></svg>
+        <div id="mobile-layoutContainer">
+            <iframe id="mobile-iframe"></iframe>
+            <ul id="mobile-menuContainer">
+            </ul>
+            <div id="mobile-close-button" onclick="mobile_close_page();">
+                <svg id="mobile-close-button-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style="opacity: 0"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M93.16667,42.49609l-43.50391,43.50391l43.50391,43.5039l10.75,-10.75l-32.75391,-32.7539l32.75391,-32.75391z"></path></g></g></svg>
+            </div>
+        </div>
+    </div>
+
+    <script src="golden.js"></script>
+</body>
